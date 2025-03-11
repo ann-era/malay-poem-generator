@@ -3,52 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
     <title>AI Poem Generator</title>
   </head>
   <body>
-    <header>
-      <h1>AI Malay Poem Generator</h1>
-    </header>
-    <main>
-      <form>
-        <input
-          type="text"
-          placeholder="Enter the topic of the Malay poem.."
-          autocomplete="off"
-          autofocus
-          required
-        />
-        <input type="submit" />
-      </form>
-      <div>
-        poem line 1<br />
-        poem line 2
-      </div>
-    </main>
-    <footer>
-      This AI Project was coded by
-      <a
-        href="https://github.com/ann-era"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Ann D.J.</a
-      >
-      and is open-seourced on
-      <a
-        href="https://github.com/ann-era/malay-poem-generator"
-        target="_blank"
-        rel="noopener noreferrer"
-        >GitHub</a
-      >
-      and is hosted on
-      <a
-        href="https://ai-malay-poem-generator.netlify.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Netlify</a
-      >
-    </footer>
+    <div class="container">
+      <header>
+        <h1>Malay Poem Generator</h1>
+      </header>
+      <main>
+        <form>
+          <input
+            class="topic-input"
+            type="text"
+            placeholder="Enter your chosen Malay poem topic here.."
+            autocomplete="off"
+            autofocus
+            required
+          />
+          <input class="topic-submit" type="submit" />
+        </form>
+        <div class="poem">
+          poem line 1<br />
+          poem line 2
+        </div>
+      </main>
+      <footer>
+        This AI Project was developed by
+        <a
+          href="https://github.com/ann-era"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ann D.J.
+        </a>
+        🇲🇾, made available as open-source on
+        <a
+          href="https://github.com/ann-era/malay-poem-generator"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        and hosted on
+        <a
+          href="https://ai-malay-poem-generator.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Netlify
+        </a>
+      </footer>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>

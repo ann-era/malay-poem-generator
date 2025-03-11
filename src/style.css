@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+header {
+  margin-bottom: 20px;
+  background-color: #08086b;
+  border-radius: 8px 8px 0 0;
+  padding: 20px;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  color: #ffce08;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.topic-input {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.topic-input:focus {
+  border-color: #ce0808;
+}
+
+.topic-submit {
+  padding: 12px 15px;
+  background-color: #ce0808;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.topic-submit:hover {
+  background-color: #a50606;
+}
+
+.poem {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  font-style: italic;
+  color: #a50606;
+  font-size: 1.1rem;
+  min-height: 100px;
+}
+
+footer {
+  background-color: #ce0808;
+  border-radius: 0 0 8px 8px;
+  margin-top: 40px;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+footer a {
+  color: #ffce08;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #08086b;
+}
