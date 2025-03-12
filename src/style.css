@@ -6,7 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background: #f4f4f4;
+  background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
   display: flex;
@@ -16,6 +16,25 @@ body {
   text-align: center;
 }
 
+body.dark-theme {
+  background-color: #000000;
+}
+
+.theme {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.theme:hover {
+  opacity: 0.8;
+}
+
 .container {
   width: 100%;
   max-width: 600px;
@@ -23,6 +42,10 @@ body {
   background-color: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
+}
+
+.container.dark-theme {
+  background-color: #333;
 }
 
 header {
