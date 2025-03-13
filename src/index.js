@@ -15,24 +15,16 @@ function toggleTheme() {
 
 function generatePoem(event) {
   event.preventDefault();
-  let main = document.querySelector("main");
-  if (main.querySelector("#poem") == null) {
-    let poemBox = '<div class="poem" id="poem"></div>';
-    main.insertAdjacentHTML("beforeend", poemBox);
-  }
-  new Typewriter("#poem", {
-    strings: "Whipping up your poem...<br />Hang tight, creativity at work!",
-    autoStart: true,
-    cursor: null,
-    delay: 50,
-  });
-
+  let poemBox = document.querySelector("#poem");
   let keywords = document.querySelector("#topic-input").value;
   let prompt = `In just 4 lines, generate a poem in malay about ${keywords}`;
   let context = `You are a poetic AI assistant, skilled in crafting 4-line Malay poems, deeply attuned to nature, life, and the inner thoughts of humanity. Each line should be separated by <br />. You will sign your work with '<strong>- SheCodes AI</strong>'`;
   let apiKey = "93aa3f2e40748o3cacebbc6bct7b0422";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
-  console.log(apiUrl);
+  if (poemBox.classList.contains("hidden")) {
+    poemBox.classList.remove("hidden");
+  }
+  poemBox.innerHTML = `<span class="blinking-text">⏳ Crafting a poem inspired by ${keywords}..</span>`;
   axios
     .get(apiUrl)
     .then(writePoem)

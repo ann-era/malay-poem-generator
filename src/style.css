@@ -96,6 +96,13 @@ form {
   background-color: #a50606;
 }
 
+small {
+  font-style: italic;
+  margin-top: -15px;
+  margin-left: 17px;
+  text-align: left;
+}
+
 .poem {
   margin-top: 30px;
   padding: 20px 30px;
@@ -107,6 +114,10 @@ form {
 
 .poem strong {
   color: #08086b;
+}
+
+.hidden {
+  display: none;
 }
 
 footer {
@@ -126,4 +137,21 @@ footer a {
 
 footer a:hover {
   color: #08086b;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.blinking-text {
+  animation: blink 1s infinite;
+  font-style: normal;
 }
