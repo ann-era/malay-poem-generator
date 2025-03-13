@@ -99,11 +99,9 @@ form {
 .poem {
   margin-top: 30px;
   padding: 20px 50px;
-  background-color: #ffd9d9;
+  background-color: #e6e6e6;
   font-style: italic;
-  color: #a50606;
   font-size: 1.1rem;
-  min-height: 100px;
   text-align: left;
 }
 

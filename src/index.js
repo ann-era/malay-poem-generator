@@ -13,5 +13,25 @@ function toggleTheme() {
   }
 }
 
+function generatePoem(event) {
+  event.preventDefault();
+  let main = document.querySelector("main");
+  let poemBox = '<div class="poem" id="poem"></div>';
+  main.insertAdjacentHTML("beforeend", poemBox);
+  let writePoem = new Typewriter("#poem", {
+    strings: "Whipping up your poem...<br />Hang tight, creativity at work!",
+    autoStart: true,
+    cursor: null,
+    delay: 50,
+  });
+  writePoem
+    .deleteAll(25)
+    .typeString("Poem Line 1<br>Poem Line 2<br>Poem Line 3")
+    .start();
+}
+
 let themeButton = document.querySelector("#theme");
 themeButton.addEventListener("click", toggleTheme);
+
+let poemForm = document.querySelector("#poem-form");
+poemForm.addEventListener("submit", generatePoem);
