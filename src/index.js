@@ -16,8 +16,10 @@ function toggleTheme() {
 function generatePoem(event) {
   event.preventDefault();
   let main = document.querySelector("main");
-  let poemBox = '<div class="poem" id="poem"></div>';
-  main.insertAdjacentHTML("beforeend", poemBox);
+  if (main.querySelector("#poem") == null) {
+    let poemBox = '<div class="poem" id="poem"></div>';
+    main.insertAdjacentHTML("beforeend", poemBox);
+  }
   let writePoem = new Typewriter("#poem", {
     strings: "Whipping up your poem...<br />Hang tight, creativity at work!",
     autoStart: true,
