@@ -98,11 +98,15 @@ form {
 
 .poem {
   margin-top: 30px;
-  padding: 20px 50px;
+  padding: 20px 30px;
   background-color: #e6e6e6;
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: left;
+}
+
+.poem strong {
+  color: #08086b;
 }
 
 footer {
