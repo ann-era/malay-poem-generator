@@ -103,6 +103,11 @@ small {
   text-align: left;
 }
 
+small.dark-theme {
+  color: #ffffff;
+  opacity: 0.5;
+}
+
 .poem {
   margin-top: 30px;
   padding: 20px 30px;
