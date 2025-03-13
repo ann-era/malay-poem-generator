@@ -98,12 +98,13 @@ form {
 
 .poem {
   margin-top: 30px;
-  padding: 20px;
-  background-color: #f1f1f1;
+  padding: 20px 50px;
+  background-color: #ffd9d9;
   font-style: italic;
   color: #a50606;
   font-size: 1.1rem;
   min-height: 100px;
+  text-align: left;
 }
 
 footer {
