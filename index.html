@@ -13,53 +13,55 @@
     <title>AI Poem Generator</title>
   </head>
   <body>
-    <button class="theme" id="theme">☀️</button>
-    <div class="container" id="container">
-      <header>
-        <h1>Malay Poem Generator</h1>
-      </header>
-      <main>
-        <form id="poem-form">
-          <input
-            class="topic-input"
-            id="topic-input"
-            type="text"
-            placeholder="Enter poem keywords.."
-            autocomplete="off"
-            autofocus
-            required
-          />
-          <small>Example: Hope, Light, Dreams, etc. </small>
-          <input class="topic-submit" type="submit" />
-        </form>
-        <div class="poem hidden" id="poem"></div>
-      </main>
-      <footer>
-        This AI Project was developed by
-        <a
-          href="https://github.com/ann-era"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ann D.J.
-        </a>
-        🇲🇾, made available as open-source on
-        <a
-          href="https://github.com/ann-era/malay-poem-generator"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-        and hosted on
-        <a
-          href="https://ai-malay-poem-generator.netlify.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Netlify
-        </a>
-      </footer>
+    <div class="contain-all">
+      <button class="theme" id="theme">☀️</button>
+      <div class="container" id="container">
+        <header>
+          <h1>Malay Poem Generator</h1>
+        </header>
+        <main>
+          <form id="poem-form">
+            <input
+              class="topic-input"
+              id="topic-input"
+              type="text"
+              placeholder="Enter poem keywords.."
+              autocomplete="off"
+              autofocus
+              required
+            />
+            <small>Example: Hope, Light, Dreams, etc. </small>
+            <input class="topic-submit" type="submit" />
+          </form>
+          <div class="poem hidden" id="poem"></div>
+        </main>
+        <footer>
+          This AI Project was developed by
+          <a
+            href="https://github.com/ann-era"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ann D.J.
+          </a>
+          🇲🇾, made available as open-source on
+          <a
+            href="https://github.com/ann-era/malay-poem-generator"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          and hosted on
+          <a
+            href="https://ai-malay-poem-generator.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Netlify
+          </a>
+        </footer>
+      </div>
     </div>
     <script src="src/index.js"></script>
   </body>
