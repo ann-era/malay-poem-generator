@@ -30,10 +30,22 @@
               autofocus
               required
             />
-            <small>Example: Hope, Light, Dreams, etc. </small>
+            <small>Example: Heart, Light, Dreams, etc. </small>
+            <input
+              class="tone-input"
+              id="tone-input"
+              type="text"
+              placeholder="Enter emotional tone setting.."
+              autocomplete="off"
+              autofocus
+            />
+            <small>Example: Happy, Nostalgic, Romantic, etc. </small>
             <input class="topic-submit" type="submit" />
           </form>
-          <div class="poem hidden" id="poem"></div>
+          <div class="poem hidden-poem" id="poem">
+            <button class="copy-btn hidden-copy" id="copy-btn">💾</button>
+            <p id="poem-text"></p>
+          </div>
         </main>
         <footer>
           This AI Project was developed by

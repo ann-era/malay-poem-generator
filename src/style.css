@@ -71,7 +71,8 @@ form {
   gap: 15px;
 }
 
-.topic-input {
+.topic-input,
+.tone-input {
   padding: 12px 15px;
   font-size: 1rem;
   border: 2px solid #ccc;
@@ -81,7 +82,8 @@ form {
   transition: border 0.3s;
 }
 
-.topic-input:focus {
+.topic-input:focus,
+.tone-input:focus {
   border-color: #ce0808;
 }
 
@@ -118,13 +120,31 @@ small.dark-theme {
   font-style: italic;
   font-size: 1rem;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .poem strong {
   color: #08086b;
 }
 
-.hidden {
+.hidden-poem {
+  display: none;
+}
+
+.copy-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: right;
+}
+
+.copy-btn:hover {
+  opacity: 0.8;
+}
+
+.hidden-copy {
   display: none;
 }
 
