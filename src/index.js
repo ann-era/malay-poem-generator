@@ -27,7 +27,12 @@ function generatePoem(event) {
   let copyButton = document.querySelector("#copy-btn");
   let keywords = document.querySelector("#topic-input").value;
   let tone = document.querySelector("#tone-input").value;
-  let prompt = `In just 4 lines, generate a poem in malay about ${keywords} in a ${tone} tone`;
+  let prompt = "";
+  if (tone !== "") {
+    prompt = `In just 4 lines, generate a poem in malay about ${keywords} in a ${tone} tone`;
+  } else {
+    prompt = `In just 4 lines, generate a poem in malay about ${keywords}`;
+  }
   let context = `You are a poetic AI assistant, skilled in crafting 4-line Malay poems, deeply attuned to nature, life, and the inner thoughts of humanity. Each line should be separated by <br />. You will sign your work with '<strong>- SheCodes AI</strong>'`;
   let apiKey = "93aa3f2e40748o3cacebbc6bct7b0422";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
@@ -37,7 +42,11 @@ function generatePoem(event) {
   if (!copyButton.classList.contains("hidden-copy")) {
     copyButton.classList.add("hidden-copy");
   }
-  poemText.innerHTML = `<span class="blinking-text">⏳ Crafting a poem inspired by ${keywords} in a ${tone} tone..</span>`;
+  if (tone !== "") {
+    poemText.innerHTML = `<span class="blinking-text">⏳ Crafting a poem inspired by ${keywords} in a ${tone} tone..</span>`;
+  } else {
+    poemText.innerHTML = `<span class="blinking-text">⏳ Crafting a poem inspired by ${keywords}..</span>`;
+  }
   axios
     .get(apiUrl)
     .then(writePoem)
